@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-caching
+cache class base
 """
 
 
@@ -9,7 +9,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class LIFOCache(BaseCaching):
     """
-    cache
+    cache class base
     """
 
     def __init__(self):

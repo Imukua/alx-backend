@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-caching
+cache class base
 """
 
 
