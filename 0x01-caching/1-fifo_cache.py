@@ -9,7 +9,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 class FIFOCache(BaseCaching):
     """
-    cache
+    cache class base
     """
 
     def __init__(self):
