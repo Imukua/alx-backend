@@ -3,7 +3,7 @@
 
 
 def index_range(page, page_size):
-    startIdx = page - 1
-    endIdx = page_size
+    startIdx = (page - 1) * page_size
+    endIdx = startIdx + page_size
 
     return (startIdx, endIdx)
