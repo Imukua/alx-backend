@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """script to return pagination parameters"""
+from typing import Tuple
 
 
 def index_range(page: int, page_size: int) -> tuple[int, int]:
