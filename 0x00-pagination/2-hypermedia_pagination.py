@@ -62,7 +62,7 @@ class Server:
         assert type(page_size) is int and page_size > 0
 
         data = self.get_page(page, page_size)
-        totaPages = math.ceil(len(self.dataset)/page_size)
+        totaPages = math.ceil(len(self.dataset())/page_size)
 
         return {
             'page_size': page_size,
