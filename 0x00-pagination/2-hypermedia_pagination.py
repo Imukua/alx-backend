@@ -58,6 +58,9 @@ class Server:
         """
         returns dict type paginatted results
         """
+        assert type(page) is int and page > 0
+        assert type(page_size) is int and page_size > 0
+
         data = self.get_page(page, page_size)
         totaPages = math.ceil(len(self.dataset)/page_size)
 
