@@ -20,7 +20,7 @@ class FIFOCache(BaseCaching):
 
         if item is not None and key is not None:
             if (
-                len(self.cache_data) > BaseCaching.MAX_ITEMS
+                len(self.cache_data) >= BaseCaching.MAX_ITEMS
                 and key not in self.cache_data.keys()
             ):
                 firstIn = next(iter(self.cache_data.keys()))
