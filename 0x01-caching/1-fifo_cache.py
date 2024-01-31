@@ -4,7 +4,7 @@ FIFO caching script
 """
 
 
-BaseCaching = __import__("base_caaching").BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class FIFOCache(BaseCaching):
