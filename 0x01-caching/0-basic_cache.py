@@ -7,7 +7,7 @@ implements put and get caching methods
 BaseCaching = __import__("BaseCaching").BaseCaching
 
 
-class BaseCache(BaseCaching):
+class BasicCache(BaseCaching):
     """
     Base cache class
     """
