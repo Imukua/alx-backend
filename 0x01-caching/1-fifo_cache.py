@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FIFO caching script
+cache class base
 """
 
 
@@ -8,29 +8,37 @@ BaseCaching = __import__("base_caching").BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """FIFO caching implementation"""
+    """
+    cache class base
+    """
 
     def __init__(self):
-        """Initialisation"""
-
+        """
+        initialisation
+        """
         super().__init__()
 
     def put(self, key, item):
-        """Stores item to the cache"""
-
-        if item is not None and key is not None:
+        """
+        put method
+        """
+        if key is None or item is None:
+            pass
+        else:
             if (
                 len(self.cache_data) >= BaseCaching.MAX_ITEMS
                 and key not in self.cache_data.keys()
             ):
-                firstIn = next(iter(self.cache_data.keys()))
-                del self.cache_data[firstIn]
-                print(f"DISCARD: {firstIn}")
+                firstkey = next(iter(self.cache_data.keys()))
+                del self.cache_data[firstkey]
+                print("DISCARD: {}".format(firstkey))
 
-                self.cache_data[key] = item
+            self.cache_data[key] = item
 
     def get(self, key):
-        """ "Returns cached item given key"""
+        """
+        get methods
+        """
         if key is None or key not in self.cache_data.keys():
             return None
         return self.cache_data.get(key)
